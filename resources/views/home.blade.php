@@ -26,8 +26,8 @@
                     </p>
         
                     <div class="hero-cta fade-up">
-                        <a href="#" class="btn-primary glow">View Work</a>
-                        <a href="#" class="btn-outline-light">Download CV</a>
+                        <a href="{{ url('/portfolio') }}" class="btn-primary glow">View Work</a>
+                        <a href="{{ asset('pdf/Andre Roets Resume.pdf') }}" class="btn-outline-light" target="_blank" download>Download CV</a>
                     </div>
                 </div>
         
@@ -90,46 +90,169 @@
             <h2 class="section-heading">Core Skills & Services</h2>
 
             <div class="stack-grid">
-                @foreach([
-                    ['🌐', 'WordPress Development', 'Custom builds, maintenance, and optimised hosting.'],
-                    ['🎨', 'UI/UX & Graphic Design', 'Adobe Suite + Canva visuals that sell your brand.'],
-                    ['📈', 'SEO Optimization', 'Technical & content strategies for ranking higher.'],
-                    ['📊', 'Analytics & Reporting', 'Track growth and user engagement.'],
-                    ['⚙️', 'Automation & Integration', 'APIs, CRM connections, smart form handling.'],
-                    ['🚀', 'Social Media & Branding', 'Consistent voice, tone, and look across all touchpoints.'],
-                    ['💡', 'Creative Direction', 'Helping you tell your story visually.'],
-                    ['🤝', 'Client-Focused Support', 'Always available, reliable, and responsive.']
-                ] as [$icon, $title, $desc])
-                    <div class="stack-item hover-float">
-                        <div class="stack-icon">{{ $icon }}</div>
-                        <div class="stack-text">
-                            <div class="stack-title">{{ $title }}</div>
-                            <div class="stack-desc">{{ $desc }}</div>
-                        </div>
+                <div class="stack-item skill-icon">
+                    <div class="stack-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor">
+                                <path d="M16 18l-4-4l4-4" />
+                                <path d="M8 6l4 4l-4 4" />
+                            </g>
+                        </svg>
                     </div>
-                @endforeach
+                    <div class="stack-text">
+                        <div class="stack-title">Web Development</div>
+                        <div class="stack-desc">Custom builds, maintenance, and optimised hosting.</div>
+                    </div>
+                </div>
+                <div class="stack-item skill-icon">
+                    <div class="stack-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor">
+                                <path d="M12 15l8.385-8.415a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3z" />
+                                <path d="M16 5l3 3" />
+                                <path d="M9 7.07a7.002 7.002 0 0 0 1 13.93a7.002 7.002 0 0 0 6.929 -5.999" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="stack-text">
+                        <div class="stack-title">UI/UX & Graphic Design</div>
+                        <div class="stack-desc">Adobe Suite + Canva visuals that sell your brand.</div>
+                    </div>
+                </div>
+                <div class="stack-item skill-icon">
+                    <div class="stack-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor">
+                                <circle cx="10" cy="10" r="7" />
+                                <line x1="21" y1="21" x2="15" y2="15" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="stack-text">
+                        <div class="stack-title">SEO Optimization</div>
+                        <div class="stack-desc">Technical & content strategies for ranking higher.</div>
+                    </div>
+                </div>
+                <div class="stack-item skill-icon">
+                    <div class="stack-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor">
+                                <rect x="3" y="12" width="6" height="8" rx="1" />
+                                <rect x="9" y="8" width="6" height="12" rx="1" />
+                                <rect x="15" y="4" width="6" height="16" rx="1" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="stack-text">
+                        <div class="stack-title">Analytics & Reporting</div>
+                        <div class="stack-desc">Track growth and user engagement.</div>
+                    </div>
+                </div>
+                <div class="stack-item skill-icon">
+                    <div class="stack-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor">
+                                <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+                                <line x1="9" y1="9" x2="10" y2="9" />
+                                <line x1="9" y1="13" x2="15" y2="13" />
+                                <line x1="9" y1="17" x2="15" y2="17" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="stack-text">
+                        <div class="stack-title">Automation & Integration</div>
+                        <div class="stack-desc">APIs, CRM connections, smart form handling.</div>
+                    </div>
+                </div>
+                <div class="stack-item skill-icon">
+                    <div class="stack-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor">
+                                <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="stack-text">
+                        <div class="stack-title">Social Media & Branding</div>
+                        <div class="stack-desc">Consistent voice, tone, and look across all touchpoints.</div>
+                    </div>
+                </div>
+                <div class="stack-item skill-icon">
+                    <div class="stack-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor">
+                                <path d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7" />
+                                <path d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3" />
+                                <line x1="9.7" y1="17" x2="14.3" y2="17" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="stack-text">
+                        <div class="stack-title">Creative Direction</div>
+                        <div class="stack-desc">Helping you tell your story visually.</div>
+                    </div>
+                </div>
+                <div class="stack-item skill-icon">
+                    <div class="stack-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor">
+                                <path d="M8 9h8" />
+                                <path d="M8 13h6" />
+                                <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="stack-text">
+                        <div class="stack-title">Client-Focused Support</div>
+                        <div class="stack-desc">Always available, reliable, and responsive.</div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- CASE STUDY -->
-        <section class="case-study fade-up">
-            <div class="case-left">
-                <div class="case-heading">Case Study: Home Finders Coastal</div>
-                <div class="case-body">
-                    <p><strong>Challenge:</strong> A luxury real estate agency needed a faster, modern website to attract high-end clients.</p>
-                    <p><strong>Solution:</strong> Rebuilt the WordPress front-end, improved mobile UX, reduced load time by 35%, and implemented local SEO.</p>
-                    <p><strong>Result:</strong> 45% increase in qualified leads, improved organic ranking, and a 5-star client review.</p>
-                </div>
-                <a href="#" class="btn-outline">View Project</a>
+        <section class="case-study">
+          <div class="cs-wrap">
+            <div class="cs-left">
+              <span class="pill">Featured Case Study</span>
+              <h2>Home Finders Coastal</h2>
+        
+              <ul class="cs-bullets">
+                <li>
+                  <strong>Challenge</strong>
+                  <p>A luxury real-estate agency needed a faster, modern website to attract high-end clients.</p>
+                </li>
+                <li>
+                  <strong>Solution</strong>
+                  <p>Rebuilt the front-end, improved mobile UX, cut load time by 35%, and implemented local SEO.</p>
+                </li>
+                <li>
+                  <strong>Result</strong>
+                  <p><b>+45%</b> qualified leads, better rankings, and a 5-star client review.</p>
+                </li>
+              </ul>
+        
+              <a class="cs-btn" href="/case-studies/home-finders-coastal">View Project</a>
+        
+              <div class="meta">
+                <span class="tag">WordPress</span>
+                <span class="tag">UI/UX</span>
+                <span class="tag">SEO</span>
+                <span class="tag">Automation</span>
+              </div>
             </div>
-
-            <div class="case-right">
-                <div class="devices">
-                    <div class="device laptop"></div>
-                    <div class="device tablet"></div>
-                    <div class="device phone"></div>
-                </div>
+        
+            <div class="cs-right" aria-hidden="true">
+              <!-- Morphing device (laptop → tablet → phone) -->
+              <div class="device-morph">
+                <span class="screen"></span>
+                <span class="laptop-base"></span>
+              </div>
+              <!-- soft shadow -->
+              <div class="device-shadow"></div>
             </div>
+          </div>
         </section>
 
 @endsection

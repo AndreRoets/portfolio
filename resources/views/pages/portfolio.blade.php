@@ -71,7 +71,7 @@
                         <div class="card-glow"></div>
 
                         <div class="project-media">
-                            <img src="/Image/Hbore.png"
+                            <img src="/Image/Hbore.webp"
                                  alt="H Borehole Drilling Website">
                         </div>
 
@@ -98,26 +98,25 @@
                         <div class="card-glow"></div>
 
                         <div class="project-media">
-                            <img src="/Image/luxuryrentals-preview.webp"
-                                 alt="Umhlanga Luxury Rentals">
+                            <img src="/Image/dbn.webp"
+                                 alt="DBN">
                         </div>
 
                         <div class="project-body">
                             <div class="project-topline">
-                                <h3 class="project-name">Umhlanga Luxury Rentals</h3>
+                                <h3 class="project-name">DBNmettlesa</h3>
                                 <div class="tech-badges">
                                     <span class="badge-tech">WordPress</span>
-                                    <span class="badge-role">High-End Letting</span>
+            
                                 </div>
                             </div>
 
                             <p class="project-desc">
-                                Premium rental showcase for high-ticket coastal stays, optimized
-                                for mobile enquiries and WhatsApp conversion.
+                                Corporate website for a Durban-based steel supplier, crafted for credibility, trust, and seamless quote enquiries.
                             </p>
 
                             <div class="project-cta">
-                                <a href="#" class="btn-live" target="_blank" rel="noopener">View Live ↗</a>
+                                <a href="https://dbnmettlesa.co.za/" class="btn-live" target="_blank" rel="noopener">View Live ↗</a>
                             </div>
                         </div>
                     </article>
@@ -154,7 +153,7 @@
                 <!-- DESIGN & BRANDING GRID -->
                 <div class="portfolio-showcase-grid" data-group="design">
                     <div class="portfolio-card">
-                        <div class="card-image-placeholder">Image 600x800</div>
+                        <img src="/Image/flyer.webp" alt="Flyer">
                         <div class="card-content">
                             <div class="card-tags">
                                 <span class="card-tag">Print Design</span>
@@ -165,7 +164,7 @@
                         </div>
                     </div>
                     <div class="portfolio-card span-col-2">
-                        <div class="card-image-placeholder">Image 1200x800</div>
+                        <img src="/Image/forsale.webp" alt="forsale">
                         <div class="card-content">
                             <div class="card-tags">
                                 <span class="card-tag">Branding</span>
@@ -176,7 +175,7 @@
                         </div>
                     </div>
                     <div class="portfolio-card">
-                        <div class="card-image-placeholder">Image 600x450</div>
+                        <img src="/Image/bc.webp" alt="BC">
                         <div class="card-content">
                             <div class="card-tags">
                                 <span class="card-tag">Branding</span>
@@ -187,7 +186,7 @@
                         </div>
                     </div>
                     <div class="portfolio-card">
-                        <div class="card-image-placeholder">Image 600x450</div>
+                        <img src="/Image/ad.webp" alt="AD">
                         <div class="card-content">
                             <div class="card-tags">
                                 <span class="card-tag">Social Campaign</span>
@@ -197,7 +196,7 @@
                         </div>
                     </div>
                     <div class="portfolio-card">
-                        <div class="card-image-placeholder">Image 600x450</div>
+                        <img src="/Image/car.webp" alt="car">
                         <div class="card-content">
                             <div class="card-tags">
                                 <span class="card-tag">Vehicle Graphics</span>
