@@ -5,20 +5,26 @@ body {
   background: #f8fafc; /* Slightly lighter background */
   color: #1e293b;
   overflow-x: hidden;
+  display: flex; /* Make body a flex container */
+  flex-direction: column; /* Stack children vertically */
+  min-height: 100vh; /* Ensure body is at least the full viewport height */
 }
 
 /* Page Wrapper */
 .page-bg {
   display: flex;
   justify-content: center;
-  padding: 0;
   background: #f8fafc;
+  flex-grow: 1; /* Allow this container to grow and fill available space */
+  width: 100%;
 }
 .page-card {
   width: 100%;
   max-width: 100%; /* Remove max-width for a fuller screen experience */
   background: #fff;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ===== Navbar ===== */
@@ -461,6 +467,7 @@ body {
     background: #0f172a;
     color: #e2e8f0;
     font-size: .9rem;
+    width: 100%;
 }
 
 /* ========================= */

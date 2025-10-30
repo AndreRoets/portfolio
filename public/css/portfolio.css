@@ -199,6 +199,48 @@ body {
     color: #a0aec0;
 }
 
+/* ================================================= */
+/* ===== Masonry Grid for Design Portfolio ===== */
+/* ================================================= */
+
+.masonry-grid {
+    column-count: 3;
+    column-gap: 1.5rem;
+    padding: 0 2rem;
+}
+
+.masonry-item {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    break-inside: avoid; /* Prevents items from breaking across columns */
+}
+
+.masonry-item:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    transform: translateY(-4px) scale(1.02);
+}
+
+.masonry-item img {
+    width: 100%;
+    display: block;
+}
+
+.masonry-info {
+    padding: 1rem 1.25rem;
+}
+
+.masonry-info h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
 .fade-down {
     opacity: 0;
     transform: translateY(-20px);
@@ -259,7 +301,15 @@ body {
         padding: 2.5rem 1.5rem;
     }
 
-    .portfolio-grid {
-        grid-template-columns: 1fr;
+    .masonry-grid {
+        column-count: 2;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .masonry-grid {
+        column-count: 1;
+        padding: 0;
     }
 }
