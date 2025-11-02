@@ -1,0 +1,315 @@
+/* ============================================
+   PORTFOLIO PAGE STYLES (match home.blade)
+   Author: Andre Roets
+   ============================================ */
+
+/* ===== Base / background / shell ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0f172a;
+    color: #f8fafc;
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    line-height: 1.5;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* full-page gradient backdrop */
+.page-bg {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    background: #f8fafc;
+}
+
+/* glass card wrapper */
+.page-card {
+    width: 100%;
+    max-width: 100%; /* Remove max-width for a fuller screen experience */
+    background: #fff;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* ================================================= */
+/* ===== Nav / header (match home.css style) ======== */
+/* ================================================= */
+
+.top-nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #e2e8f0;
+    transition: background 0.3s ease;
+    padding: 1.25rem 2rem;
+}
+
+/* brand text same as home.css */
+.brand {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: #0f172a;
+    font-size: 1.2rem;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+}
+
+/* menu layout same as home.css */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+/* links same color and hover as home.css */
+.menu-link {
+    position: relative;
+    font-size: .9rem;
+    font-weight: 500;
+    color: #475569;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.menu-link:hover {
+    color: #0ea5e9;
+}
+
+.menu-link.active {
+    color: #0ea5e9;
+}
+
+.menu-link.active::after {
+    content: none;
+}
+
+/* CTA button (Talk) */
+.btn-talk {
+    background: #0ea5e9;
+    color: #fff;
+    font-size: .8rem;
+    font-weight: 600;
+    padding: .6rem 1.2rem;
+    line-height: 1;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    box-shadow: 0 8px 20px rgba(14,165,233,0.4);
+    transition: transform .3s, box-shadow .3s;
+}
+
+.btn-talk:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 32px rgba(14,165,233,0.45);
+}
+
+/* disable pulse animation */
+.pulse {
+    position: relative;
+    animation: none;
+}
+.pulse::after {
+    content: none;
+}
+
+/* ================================================= */
+/* ===== Portfolio content ===== */
+/* ================================================= */
+
+.page-content {
+    padding: 2rem 0;
+    animation: fadeUp 0.5s ease-out forwards;
+}
+
+.section-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: #f8fafc;
+}
+
+.section-subheading {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #a0aec0;
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+    line-height: 1.6;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.portfolio-item {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.portfolio-item:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    transform: translateY(-4px) scale(1.02);
+}
+
+.portfolio-item a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.portfolio-item img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 500 / 350;
+    object-fit: cover;
+}
+
+.portfolio-info {
+    padding: 1.5rem;
+}
+
+.portfolio-info h3 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.portfolio-info p {
+    margin: 0;
+    color: #a0aec0;
+}
+
+/* ================================================= */
+/* ===== Masonry Grid for Design Portfolio ===== */
+/* ================================================= */
+
+.masonry-grid {
+    column-count: 3;
+    column-gap: 1.5rem;
+    padding: 0 2rem;
+}
+
+.masonry-item {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    break-inside: avoid; /* Prevents items from breaking across columns */
+}
+
+.masonry-item:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    transform: translateY(-4px) scale(1.02);
+}
+
+.masonry-item img {
+    width: 100%;
+    display: block;
+}
+
+.masonry-info {
+    padding: 1rem 1.25rem;
+}
+
+.masonry-info h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.fade-down {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeDown 0.5s ease forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================================================= */
+/* ===== Footer (match home.css) ===== */
+/* ================================================= */
+
+.footer {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: #0f172a;
+    color: #e2e8f0; /* This was correct, but for consistency will match home.css */
+    font-size: .9rem;
+}
+
+.footer p {
+    line-height: 1.4;
+    color: #94a3b8;
+}
+
+/* ================================================= */
+/* ===== Responsive tweaks ===== */
+/* ================================================= */
+
+@media (max-width: 768px) {
+    .top-nav {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 1.25rem;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        row-gap: .75rem;
+    }
+
+    .footer {
+        margin: 3rem -1rem -2rem;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        padding: 2.5rem 1.5rem;
+    }
+
+    .masonry-grid {
+        column-count: 2;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .masonry-grid {
+        column-count: 1;
+        padding: 0;
+    }
+}
